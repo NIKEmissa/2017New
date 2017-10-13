@@ -270,3 +270,10 @@ print(Hurdict['AL022009       ANA'])
 print(find_out_cp)
 number_storm_hurricane()
 # print(Hurdict['Number of storm and hurricane'])
+
+for line in Hurricane[:]:
+    # print(len(line))
+    if len(line.split(sep=",")) == 4:  # select header; handle with header
+        Storm_system_name = str(line)[:8] + str(line)[18:28]  # pick up names
+        print(Storm_system_name)
+
